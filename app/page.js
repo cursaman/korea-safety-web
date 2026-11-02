@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import HeroSlider from './components/hero-slider';
 
 const ADDRESS = '경남 양산시 북정서길 22, 201호';
 const MAP = `https://map.naver.com/p/search/${encodeURIComponent(ADDRESS)}`;
@@ -90,12 +91,7 @@ export default function Home() {
           <div className="hero-actions"><a href="#schedule" className="button button-primary">교육 일정 확인 <Arrow /></a><a href="tel:0553890302" className="button button-outline">전화로 문의하기 <Arrow diagonal /></a></div>
           <div className="hero-footnote"><span className="check">✓</span> 4시간 교육 <i /> 신분증 지참 <i /> 주차 가능</div>
         </div>
-        <div className="hero-visual">
-          <div className="visual-top"><span>SAFETY STARTS HERE</span><span className="visual-code">KSE / 01</span></div>
-          <div className="helmet-art"><span className="orbit orbit-one" /><span className="orbit orbit-two" /><Helmet large /><span className="art-cross cross-one">+</span><span className="art-cross cross-two">+</span></div>
-          <div className="visual-bottom"><span>오늘의 교육이<br /><strong>내일의 안전이 됩니다.</strong></span><span className="visual-arrow" aria-hidden="true">↗</span></div>
-          <div className="time-tag"><span className="tag-icon" aria-hidden="true">◷</span><span>건설업 기초안전보건교육<strong>4시간 교육과정</strong></span></div>
-        </div>
+        <HeroSlider />
       </section>
 
       <section className="facts container" aria-label="교육 핵심 정보">
